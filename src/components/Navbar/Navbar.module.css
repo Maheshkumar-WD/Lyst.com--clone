@@ -1,0 +1,95 @@
+@import url(d:\masaiSchool\unit_construct_projects\unit_5\worried-way-9596\src\App.css);
+.navbar_top_links {
+  padding-top: 12px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+
+.navbar_top_join_btn {
+  background-color: var(--primary-color) !important;
+  color: #fff;
+  padding: 6px 14px;
+  height: auto;
+}
+
+.navbar_top_join_btn:hover {
+  background-color: var(--primary-color-hover) !important;
+}
+
+.navbar_main {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+}
+
+.navbar_main .navbar_Logo {
+  font-size: 54px;
+  margin-right: 24px;
+  color: var(--primary-color);
+  font-weight: 900;
+}
+
+.navbar_main .navbar_links {
+  margin-right: 24px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 14px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.navbar_main .navbar_search {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+}
+
+.navbar_main .navbar_search .input_search {
+  border: 2px solid var(--secondary-color);
+  padding-left: 54px;
+}
+
+.navbar_main .navbar_search .input_search::-webkit-input-placeholder {
+  color: var(--primary-color);
+}
+
+.navbar_main .navbar_search .input_search:-ms-input-placeholder {
+  color: var(--primary-color);
+}
+
+.navbar_main .navbar_search .input_search::-ms-input-placeholder {
+  color: var(--primary-color);
+}
+
+.navbar_main .navbar_search .input_search::placeholder {
+  color: var(--primary-color);
+}
+
+.navbar_main .navbar_search .input_search:focus {
+  border: none;
+  border: 2px solid var(--primary-color);
+  outline: none;
+}
+
+.navbar_main .navbar_search .navbar_search_button {
+  z-index: 1;
+  color: #fff;
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+.navbar_main .navbar_search .navbar_search_button:hover {
+  background-color: var(--primary-color-hover);
+}
+/*# sourceMappingURL=Navbar.module.css.map */

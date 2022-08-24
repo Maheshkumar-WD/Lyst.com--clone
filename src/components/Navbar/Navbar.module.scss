@@ -1,0 +1,65 @@
+@import "../../App.css";
+.navbar_top_links {
+  padding-top: 12px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+.navbar_top_join_btn {
+  background-color: var(--primary-color) !important;
+  color: #fff;
+  padding: 6px 14px;
+  height: auto;
+  &:hover {
+    background-color: var(--primary-color-hover) !important;
+  }
+}
+.navbar_main {
+  align-items: center;
+  gap: 24px;
+
+  .navbar_Logo {
+    font-size: 54px;
+    margin-right: 24px;
+    color: var(--primary-color);
+    font-weight: 900;
+  }
+  .navbar_links {
+    // margin-top: 12px;
+    margin-right: 24px;
+    align-self: center;
+    display: flex;
+    gap: 14px;
+    align-items: flex-end;
+  }
+  .navbar_search {
+    // margin-top: 12px;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+
+    .input_search {
+      border: 2px solid var(--secondary-color);
+      padding-left: 54px;
+      &::placeholder {
+        color: var(--primary-color);
+      }
+      &:focus {
+        border: none;
+        border: 2px solid var(--primary-color);
+        outline: none;
+      }
+    }
+    .navbar_search_button {
+      z-index: 1;
+      // width: 0;
+      color: #fff;
+      background-color: var(--primary-color);
+      position: absolute;
+      left: 0;
+      &:hover {
+        background-color: var(--primary-color-hover);
+      }
+    }
+  }
+}

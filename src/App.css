@@ -1,0 +1,15 @@
+:root {
+  /* colors  */
+  --primary-color: #008080;
+  --primary-color-hover: #007373;
+  /* dark  */
+  --secondary-color: #333333;
+  --secondary-color-hover: #2e2e2e;
+
+  /* gray  */
+  --background-primary-color: #f3f3f3;
+  --background-secondary-color: ;
+}
+.App {
+  background-color: var(--background-primary-color);
+}
