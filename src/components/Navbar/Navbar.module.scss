@@ -1,4 +1,10 @@
-@import "../../App.css";
+.navbar {
+  position: sticky;
+  top: -54px;
+  background-color: var(--background-primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  z-index: 1000;
+}
 .navbar_top_links {
   padding-top: 12px;
   justify-content: flex-end;

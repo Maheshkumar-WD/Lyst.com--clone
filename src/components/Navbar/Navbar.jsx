@@ -1,15 +1,15 @@
-import { Box, Flex, Icon, Text, Input, Link, Button } from "@chakra-ui/react";
+import { Box, Flex, Icon, Text, Input, Button } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { Search2Icon } from "@chakra-ui/icons";
 import React from "react";
 import styles from "./Navbar.module.css";
-
 function Navbar() {
   return (
-    <Box>
+    <Box className={styles.navbar}>
       <Flex className={styles.navbar_top_links}>
-        <Link>IN-US$</Link>
-        <Link>Help</Link>
-        <Link>Sign in</Link>
+        <Link to="/">IN-US$</Link>
+        <Link to="/">Help</Link>
+        <Link to="/login">Sign in</Link>
         <Button className={styles.navbar_top_join_btn}>JOIN</Button>
       </Flex>
       <Flex className={styles.navbar_main}>
@@ -17,8 +17,8 @@ function Navbar() {
           <Text className={styles.navbar_Logo}>LYST</Text>
         </Box>
         <Box className={styles.navbar_links}>
-          <Link>Womens</Link>
-          <Link>Mens</Link>
+          <Link to="/">Womens</Link>
+          <Link to="/">Mens</Link>
         </Box>
         <Box className={styles.navbar_search}>
           <Input
