@@ -1,4 +1,12 @@
-@import url(d:\masaiSchool\unit_construct_projects\unit_5\worried-way-9596\src\App.css);
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -54px;
+  background-color: var(--background-primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  z-index: 1000;
+}
+
 .navbar_top_links {
   padding-top: 12px;
   -webkit-box-pack: end;

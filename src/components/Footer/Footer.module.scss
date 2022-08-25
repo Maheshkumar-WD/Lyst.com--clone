@@ -1,0 +1,17 @@
+.footerSection {
+  border-top: 2px solid var(--primary-color);
+  .leftSection {
+    padding: 24px 0 24px 54px;
+    .boldText {
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+  }
+  .rightSection {
+    padding: 24px 54px 24px 0;
+    .links {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

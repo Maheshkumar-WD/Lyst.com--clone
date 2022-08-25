@@ -1,0 +1,27 @@
+.footerSection {
+  border-top: 2px solid var(--primary-color);
+}
+
+.footerSection .leftSection {
+  padding: 24px 0 24px 54px;
+}
+
+.footerSection .leftSection .boldText {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.footerSection .rightSection {
+  padding: 24px 54px 24px 0;
+}
+
+.footerSection .rightSection .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=Footer.module.css.map */

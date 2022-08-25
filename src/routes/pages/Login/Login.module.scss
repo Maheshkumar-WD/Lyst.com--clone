@@ -1,0 +1,7 @@
+.authActionBtn {
+  background-color: var(--primary-color) !important;
+  color: white;
+  &:hover {
+    background-color: var(--primary-color-hover) !important;
+  }
+}
