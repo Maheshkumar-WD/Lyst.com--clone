@@ -5,8 +5,10 @@ import {
   Container,
   Heading,
   Input,
+  Text,
   Stack,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import styles from "./Login.module.css";
 function LoginPage() {
   return (
@@ -19,6 +21,9 @@ function LoginPage() {
         <Input type="password" placeholder="Password" />
         <Button className={styles.authActionBtn}>Login</Button>
       </Stack>
+      <Text marginTop="24px">
+        Not Joined with us? <Link to="/signup">Join</Link>
+      </Text>
     </Container>
   );
 }
