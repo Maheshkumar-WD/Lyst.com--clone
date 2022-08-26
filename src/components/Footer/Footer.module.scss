@@ -2,6 +2,10 @@
   border-top: 2px solid var(--primary-color);
   .leftSection {
     padding: 24px 0 24px 54px;
+    .ratingStars {
+      color: var(--primary-color);
+      font-size: 34px !important;
+    }
     .boldText {
       color: var(--primary-color);
       font-weight: bold;

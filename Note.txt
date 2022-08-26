@@ -1,0 +1,50 @@
+cart:{
+     "productid": "",
+     "name": "",
+     "category": "",
+     "brand": "",
+     "color":""
+     "gender": "",
+     "price": "",
+     "quantity": ""
+     "image":""
+}
+
+products: {
+     "productid": "",
+     "name": "",
+     "category": "",
+     "brand": "",
+     "color":[],
+     "gender": "",
+     "price": "",
+     "stockQuantity": ""
+     "image":""
+     "url":"
+}
+
+
+database:{
+  "users": [
+    {
+      "name": "",
+      "age": "",
+      "password": "",
+      "address": {
+        "street": null,
+        "city": null,
+        "pincode": null,
+        "state": null,
+        "country": null,
+        "mobile": null
+      },
+
+      "cart": [
+      ],
+
+      "orders": [
+        
+      ]
+    }
+  ]
+}

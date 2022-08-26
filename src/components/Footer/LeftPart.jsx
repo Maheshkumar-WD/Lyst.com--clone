@@ -13,13 +13,13 @@ import {
 } from "@chakra-ui/react";
 import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
-// import openAppStoreModel from "./FooterUtils";
 import OpenAppStoreModel from "./FooterUtils";
+// import styles from "./Footer.module.css";
 
 function RatingStars() {
   return (
     <>
-      <StarRounded sx={{ color: "teal", fontSize: "48px" }} />
+      <StarRounded className={styles.RatingStars} />
       <StarRounded sx={{ color: "teal", fontSize: "48px" }} />
       <StarRounded sx={{ color: "teal", fontSize: "48px" }} />
       <StarRounded sx={{ color: "teal", fontSize: "48px" }} />

@@ -9,8 +9,10 @@ function Navbar() {
       <Flex className={styles.navbar_top_links}>
         <Link to="/">IN-US$</Link>
         <Link to="/">Help</Link>
-        <Link to="/login">Sign in</Link>
-        <Button className={styles.navbar_top_join_btn}>JOIN</Button>
+        <Link to="/signin">Sign in</Link>
+        <Link to="/signup">
+          <Button className={styles.navbar_top_join_btn}>JOIN</Button>
+        </Link>
       </Flex>
       <Flex className={styles.navbar_main}>
         <Box>
