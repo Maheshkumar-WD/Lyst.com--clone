@@ -2,10 +2,15 @@ import { Box, Image } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import OpenAppStoreModel from "../../../components/Footer/FooterUtils";
+import Bag from "../../../components/ProductComponent/Bag/Bag";
+import Jewellery from "../../../components/ProductComponent/jewellery/Jewellery";
+import Shirts from "../../../components/ProductComponent/Shirts/Shirts";
 import styles from "./Home.module.css";
 function HomePage() {
   return (
-    <div style={{ backgroundColor: "white", height: "1200px" }}>
+    <div
+      style={{ backgroundColor: "white", height: "auto", padding: "24px 0" }}
+    >
       <Box className={styles.bannerSection}>
         <Link to="/">
           <Image
@@ -14,6 +19,9 @@ function HomePage() {
           />
         </Link>
       </Box>
+      <Shirts />
+      <Jewellery />
+      <Bag />
     </div>
   );
 }

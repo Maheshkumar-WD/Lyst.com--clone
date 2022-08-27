@@ -14,16 +14,25 @@ import {
 import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
 import OpenAppStoreModel from "./FooterUtils";
-// import styles from "./Footer.module.css";
 
 function RatingStars() {
   return (
     <>
-      <StarRounded className={styles.RatingStars} />
-      <StarRounded sx={{ color: "teal", fontSize: "48px" }} />
-      <StarRounded sx={{ color: "teal", fontSize: "48px" }} />
-      <StarRounded sx={{ color: "teal", fontSize: "48px" }} />
-      <StarHalfRoundedIcon sx={{ color: "teal", fontSize: "48px" }} />
+      <StarRounded
+        className={styles.RatingStars}
+      />
+      <StarRounded
+        className={styles.RatingStars}
+      />
+      <StarRounded
+        className={styles.RatingStars}
+      />
+      <StarRounded
+        className={styles.RatingStars}
+      />
+      <StarHalfRoundedIcon
+        className={styles.RatingStars}
+      />
     </>
   );
 }
@@ -32,7 +41,7 @@ function LeftPart() {
   return (
     <div className={styles.leftSection}>
       <Flex alignItems={"center"}>
-        <StarRounded sx={{ color: "teal", fontSize: "32px" }} />
+        <StarRounded className={styles.RatingStars} />
         <Heading size="md">Trustpoilet</Heading>
       </Flex>
       <RatingStars />

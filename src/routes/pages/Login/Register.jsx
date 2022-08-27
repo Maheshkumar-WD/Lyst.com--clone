@@ -6,10 +6,10 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import userSignUp from "./authUtils";
-// import { styles } from "./Login.module.css";
+import { userSignUp } from "./authUtils";
+import axios from "axios";
 import styles from "./Login.module.css";
 const initData = {
   name: "",
@@ -33,6 +33,13 @@ function RegisterPage() {
   let [formData, setFormData] = useState(initData);
   let [cpass, setCPass] = useState("");
 
+  useEffect(() => {
+    axios
+      .get("https://lyst-db-constructweek.herokuapp.com/users")
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     if (name !== "confirmPassword") {
@@ -43,52 +50,58 @@ function RegisterPage() {
       setFormData(newData);
     } else {
       setCPass(value);
-      console.log(cpass);
     }
   };
-  let disabled =
-    formData.password !== cpass &&
-    formData.name == "" &&
-    formData.email == "" &&
-    formData.password == ""
-      ? "disabled"
-      : "";
 
   return (
-    <Container bg={"white"} marginTop="50px" padding={"24px"}>
+    <Container
+      className={styles.formContainer}
+      bg={"white"}
+      marginTop="50px"
+      padding={"24px"}
+    >
       <Heading textAlign={"center"} margin={"12px 0"} size={"lg"}>
         Sign Up
       </Heading>
-      <Stack>
-        <Input
-          onChange={(e) => handleChange(e)}
-          name="email"
-          type="email"
-          placeholder="Email"
-          value={formData.email}
-        />
-        <Input
-          onChange={(e) => handleChange(e)}
-          name="password"
-          type="password"
-          value={formData.password}
-          placeholder="Password"
-        />
-        <Input
-          onChange={(e) => handleChange(e)}
-          name="confirmPassword"
-          type="password"
-          value={cpass}
-          placeholder="Confirm Password"
-        />
-        <Button
-          disabled={disabled}
-          onClick={() => userSignUp(formData)}
-          className={styles.authActionBtn}
-        >
-          Join
-        </Button>
-      </Stack>
+      <form action="">
+        <Stack>
+          <Input
+            onChange={(e) => handleChange(e)}
+            name="name"
+            type="text"
+            placeholder="User Name"
+            value={formData.name}
+            required="required"
+          />
+          <Input
+            onChange={(e) => handleChange(e)}
+            name="email"
+            type="email"
+            placeholder="Email"
+            value={formData.email}
+          />
+          <Input
+            onChange={(e) => handleChange(e)}
+            name="password"
+            type="password"
+            value={formData.password}
+            placeholder="Password"
+          />
+          <Input
+            onChange={(e) => handleChange(e)}
+            name="confirmPassword"
+            type="password"
+            value={cpass}
+            placeholder="Confirm Password"
+          />
+          <Button
+            onClick={() => userSignUp(formData)}
+            className={styles.authActionBtn}
+          >
+            Join
+          </Button>
+        </Stack>
+      </form>
       <Text marginTop="24px">
         All ready Joined? <Link to="/signin">Login</Link>
       </Text>

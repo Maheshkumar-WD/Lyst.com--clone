@@ -10,6 +10,28 @@
   justify-content: flex-end;
   align-items: center;
   gap: 12px;
+  .profileBtn {
+    background-color: var(--primary-color);
+    color: white;
+    &:hover {
+      background-color: var(--primary-color-hover);
+    }
+  }
+
+  .cartCountContainer {
+    display: flex;
+    justify-content: space-between;
+    .signoutbtn {
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+  }
+  .cartCount {
+    color: var(--primary-color);
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 .navbar_top_join_btn {
   background-color: var(--primary-color) !important;
@@ -58,7 +80,6 @@
     }
     .navbar_search_button {
       z-index: 1;
-      // width: 0;
       color: #fff;
       background-color: var(--primary-color);
       position: absolute;

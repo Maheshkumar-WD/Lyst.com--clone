@@ -18,6 +18,40 @@
   gap: 12px;
 }
 
+.navbar_top_links .profileBtn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.navbar_top_links .profileBtn:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.navbar_top_links .cartCountContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar_top_links .cartCountContainer .signoutbtn {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.navbar_top_links .cartCount {
+  color: var(--primary-color);
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .navbar_top_join_btn {
   background-color: var(--primary-color) !important;
   color: #fff;
