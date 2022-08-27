@@ -1,3 +1,9 @@
+.formContainer {
+  -webkit-box-shadow: 0 0 8px gray;
+          box-shadow: 0 0 8px gray;
+  border-radius: 12px;
+}
+
 .authActionBtn {
   background-color: var(--primary-color) !important;
   color: white;

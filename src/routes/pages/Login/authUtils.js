@@ -1,14 +1,30 @@
-import { EnvironmentProvider } from "@chakra-ui/react";
 import axios from "axios";
 
-const userSignUp = (data) => {
+export const userSignIn = (data, setIsAuth, setUserData) => {
+  
+  axios
+    .get("https://lyst-db-constructweek.herokuapp.com/users")
+    .then((res) => {
+      res.data.map((user) => {
+        if (data.email == user.email && data.password == user.password) {
+          setIsAuth(true);
+          setUserData(user);
+        } else {
+          console.log("user not found");
+        }
+      });
+    })
+    .catch((err) => console.log(err));
+};
+
+export const userSignUp = (data) => {
+  console.log(data);
   axios({
     method: "post",
-    url: process.env.REACT_APP_USER_API_BASE_URL,
-    data: JSON.stringify(data),
+    headers: { "Context-Type": "application/json" },
+    data: data,
+    url: "https://lyst-db-constructweek.herokuapp.com/users",
   })
     .then((res) => console.log("Data Added Success"))
     .catch((err) => console.log("Failed to add Data"));
 };
-
-export default userSignUp;

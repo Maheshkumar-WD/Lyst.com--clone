@@ -6,6 +6,11 @@
   padding: 24px 0 24px 54px;
 }
 
+.footerSection .leftSection .RatingStars {
+  font-size: 38px !important;
+  color: var(--primary-color) !important;
+}
+
 .footerSection .leftSection .boldText {
   color: var(--primary-color);
   font-weight: bold;
