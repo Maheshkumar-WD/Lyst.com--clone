@@ -33,6 +33,7 @@ function RegisterPage() {
   let [formData, setFormData] = useState(initData);
   let [cpass, setCPass] = useState("");
   let submitBtn = useRef();
+  let [isFound,setIsFound] = useState("");
   let [existEmailStyle, setExistEmailStyle] = useState({
     display: "none",
     color: "red",
@@ -46,11 +47,13 @@ function RegisterPage() {
       .then((res) => {
         res.data.map((user) => {
           if (user.email === formData.email) {
+            setIsFound(true);
             submitBtn.current.disabled = true;
             setExistEmailStyle({
               ...existEmailStyle,
               display: "inline",
             });
+            
           } else {
             submitBtn.current.disabled = false;
             setExistEmailStyle({
@@ -58,6 +61,7 @@ function RegisterPage() {
               display: "none",
             });
           }
+          
         });
       })
       .catch((err) => console.log(err));

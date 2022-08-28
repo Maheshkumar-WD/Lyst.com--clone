@@ -17,9 +17,8 @@ import { useParams } from "react-router-dom";
 export default function ProductsPage() {
   let [data, setData] = useState([]);
   let [srtPrice, setSrtPrice] = useState("");
-  let [category, setCategory] = useState(false);
+  let [category, setCategory] = useState("");
   let q = useParams();
-  console.log(q);
   const handlePriceSort = (e) => {
     let value = e.target.value;
     setSrtPrice(value);
@@ -30,13 +29,12 @@ export default function ProductsPage() {
   };
 
   useEffect(() => {
-    let qurl;
+    let qurl = `https://lyst-db-constructweek.herokuapp.com/prdoucts/?gender=${q.searchBy}&_sort=price&_order=${srtPrice}`;
     if (category === "") {
-      qurl = `https://lyst-db-constructweek.herokuapp.com/prdoucts?gender=${q.searchBy}&_sort=price&_order=${srtPrice}`;
+      qurl = `https://lyst-db-constructweek.herokuapp.com/prdoucts/?gender=${q.searchBy}&_sort=price&_order=${srtPrice}`;
     } else {
-      qurl = `https://lyst-db-constructweek.herokuapp.com/prdoucts?category=${category}&gender=${q.searchBy}&_sort=price&_order=${srtPrice}`;
+      qurl = `https://lyst-db-constructweek.herokuapp.com/prdoucts/?category=${category}&gender=${q.searchBy}&_sort=price&_order=${srtPrice}`;
     }
-    console.log(qurl);
     axios
       .get(`${qurl}`)
       .then((res) => setData(res.data))

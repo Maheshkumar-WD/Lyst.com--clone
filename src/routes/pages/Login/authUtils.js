@@ -5,8 +5,8 @@ export const userSignIn = (data, setIsAuth, setUserData) => {
   axios
     .get("https://lyst-db-constructweek.herokuapp.com/users")
     .then((res) => {
-      res.data.map((user) => {
-        if (data.email == user.email && data.password == user.password) {
+      return res.data.map((user) => {
+        if (data.email === user.email && data.password === user.password) {
           setIsAuth(true);
           setUserData(user);
         } else {

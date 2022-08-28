@@ -1,7 +1,6 @@
 import { Box, Image } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
-import OpenAppStoreModel from "../../../components/Footer/FooterUtils";
 import Bag from "../../../components/ProductComponent/Bag/Bag";
 import Jewellery from "../../../components/ProductComponent/jewellery/Jewellery";
 import Shirts from "../../../components/ProductComponent/Shirts/Shirts";

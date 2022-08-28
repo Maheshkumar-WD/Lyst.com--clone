@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function getdata() {
   return axios.get(
-    "https://lyst-db-constructweek.herokuapp.com/prdoucts?category=shirt"
+    "https://lyst-db-constructweek.herokuapp.com/prdoucts/?category=shirt"
   );
 }
 
@@ -25,7 +25,7 @@ function Shirts() {
       <Box width={"90%"} margin="auto" marginTop="24px" borderRadius="24px">
         <Flex gap={"24px"} justifyContent="center" padding={"24px 24px"}>
           {data?.map((prod, i) => {
-            if (i < 4) {
+            if (i > 4) {
               return;
             }
             console.log(prod);
