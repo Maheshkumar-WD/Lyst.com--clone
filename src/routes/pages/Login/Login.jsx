@@ -12,7 +12,6 @@ import { Link, Navigate } from "react-router-dom";
 import styles from "./Login.module.css";
 import { AuthContext } from "../../../context/AuthContext";
 import { userSignIn } from "./authUtils";
-import Demoapi from "../../../Demoapi";
 function LoginPage() {
   const { isAuth, setIsAuth, user, setUser } = useContext(AuthContext);
 
@@ -34,7 +33,6 @@ function LoginPage() {
 
   return (
     <>
-    {/* <Demoapi /> */}
       <Container
         className={styles.formContainer}
         bg={"white"}

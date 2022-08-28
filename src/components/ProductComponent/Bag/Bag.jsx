@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function getdata() {
   return axios.get(
-    "https://lyst-db-constructweek.herokuapp.com/prdoucts?category=bags"
+    "https://lyst-db-constructweek.herokuapp.com/prdoucts?category=bag"
   );
 }
 
