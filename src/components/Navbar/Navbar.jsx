@@ -63,7 +63,10 @@ function Navbar() {
       </Flex>
       <Flex className={styles.navbar_main}>
         <Box>
-          <Text className={styles.navbar_Logo}>LYST</Text>
+          <Link to="/">
+            {" "}
+            <Text className={styles.navbar_Logo}>LYST</Text>
+          </Link>
         </Box>
         <Box className={styles.navbar_links}>
           <Link to="/products/female">Womens</Link>

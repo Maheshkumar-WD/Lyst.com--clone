@@ -1,7 +1,7 @@
 import axios from "axios";
+import { Navigate } from "react-router-dom";
 
 export const userSignIn = (data, setIsAuth, setUserData) => {
-  
   axios
     .get("https://lyst-db-constructweek.herokuapp.com/users")
     .then((res) => {
@@ -25,6 +25,9 @@ export const userSignUp = (data) => {
     data: data,
     url: "https://lyst-db-constructweek.herokuapp.com/users",
   })
-    .then((res) => console.log("Data Added Success"))
+    .then((res) => {
+      console.log("Data Added Success");
+      return <Navigate to="/signin" />;
+    })
     .catch((err) => console.log("Failed to add Data"));
 };

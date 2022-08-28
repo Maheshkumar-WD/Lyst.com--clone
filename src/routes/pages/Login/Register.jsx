@@ -7,7 +7,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { userSignUp } from "./authUtils";
 import axios from "axios";
 import styles from "./Login.module.css";
@@ -32,13 +32,36 @@ const initData = {
 function RegisterPage() {
   let [formData, setFormData] = useState(initData);
   let [cpass, setCPass] = useState("");
+  let submitBtn = useRef();
+  let [existEmailStyle, setExistEmailStyle] = useState({
+    display: "none",
+    color: "red",
+    fontSize: "14px",
+    paddingLeft: "6px",
+  });
 
   useEffect(() => {
     axios
       .get("https://lyst-db-constructweek.herokuapp.com/users")
-      .then((res) => console.log(res))
+      .then((res) => {
+        res.data.map((user) => {
+          if (user.email === formData.email) {
+            submitBtn.current.disabled = true;
+            setExistEmailStyle({
+              ...existEmailStyle,
+              display: "inline",
+            });
+          } else {
+            submitBtn.current.disabled = false;
+            setExistEmailStyle({
+              ...existEmailStyle,
+              display: "none",
+            });
+          }
+        });
+      })
       .catch((err) => console.log(err));
-  }, []);
+  }, [formData.email]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -73,6 +96,7 @@ function RegisterPage() {
             value={formData.name}
             required="required"
           />
+          <Text style={existEmailStyle}>Email already exist</Text>
           <Input
             onChange={(e) => handleChange(e)}
             name="email"
@@ -95,6 +119,7 @@ function RegisterPage() {
             placeholder="Confirm Password"
           />
           <Button
+            ref={submitBtn}
             onClick={() => userSignUp(formData)}
             className={styles.authActionBtn}
           >
